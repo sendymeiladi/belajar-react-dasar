@@ -5,15 +5,15 @@ import TaskList from "./TaskList";
 export default function Task() {
     const [items, setItems] = useImmer([]);
 
-    function handleOnSubmit(item){
-        setItems((draft) => {
-            draft.push(item);
-        });
-    }
+    // function handleOnSubmit(item){
+    //     setItems((draft) => {
+    //         draft.push(item);
+    //     });
+    // }
 
     return (
         <div>
-           <TaskForm onSubmit={handleOnSubmit} />
+           <TaskForm setItems={setItems} />
            <TaskList items={items} />
         </div>
     )
